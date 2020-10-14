@@ -1,0 +1,30 @@
+@url = http://localhost:3005/api
+@json = Content-Type: application/json
+
+###
+
+GET {{url}}/findUsers
+
+### 注册
+POST {{url}}/register
+{{json}}
+
+{
+    "username":"user2",
+    "password":"123456"
+}
+
+### 登录
+
+POST {{url}}/login
+{{json}}
+
+{
+    "username":"user2",
+    "password":"123456"
+}
+
+### 个人信息
+
+GET {{url}}/userinfo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmODZlZmQ0MjgwMGE0NDA2MDU5NWIyMCIsImlhdCI6MTYwMjY3OTk4OH0.DOEBLdS35FXoTMoCK0qAKd9eWMRLOikg6QU_5zLLr2Y
